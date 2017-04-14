@@ -1,0 +1,32 @@
+<img src="http://lineadecodigo.com/wp-content/uploads/2006/12/firefox.jpg" id="firefox"/>
+<img src="http://lineadecodigo.com/wp-content/uploads/2007/01/bea.gif" id="bea"/>
+<img src="http://lineadecodigo.com/wp-content/uploads/2006/12/java.jpg" id="java"/>
+<img src="http://lineadecodigo.com/wp-content/uploads/2006/12/opera.jpg" id="opera"/>
+<img src="http://lineadecodigo.com/wp-content/uploads/2006/12/eclipse.jpg" id="eclipse"/>
+
+
+<!DOCTYPE>
+<html>
+		<head>
+			<link href="js/extension.js"/>
+		</head>
+		<body>
+		<form action="">
+		<label for="elemento">Nombre del logo:</label>
+		<input type="text" id="elemento">
+		<input type="button" onClick="eliminarElemento(document.getElementById('elemento').value);" value="Eliminar Elemento"/>
+		</form>
+
+		</body>
+		<script type="text/javascript">	
+		function eliminarElemento(id){
+			imagen = document.getElementById(id);	
+			if (!imagen){
+				alert("El elemento selecionado no existe");
+			} else {
+				padre = imagen.parentNode;
+				padre.removeChild(imagen);
+			}
+		}
+	</script>
+</html>
